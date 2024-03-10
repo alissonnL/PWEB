@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página explicativa de API">
+    <meta name="keywords" content="API, integração, Application Program Interface">
+    <meta name="author" content="Alisson">
+    <title>APIs - Integração e Tipos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Introdução a APIs</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#api">API e Integrações</a></li>
+                <li><a href="#tiposApi">Tipos de API</a></li>
+                <li><a href="#soapRest">API SOAP e REST</a></li>
+                <li><a href="#ferramentas">Ferramentas</a></li>
+                <li><a href="#swagger">SWAGGER</a></li>
+                <li><a href="#blueprint">API Blueprint</a></li>
+                <li><a href="#raml">RAML</a></li>
+                <li><a href="#referencias">Referências</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h2 id="api">API e Integrações</h2>
+
+            <article class="artigoApi">
+                <p>API é a sigla em inglês para Application Programming Interface, ou interface de
+                    programação de aplicações. As interfaces de programação de aplicativos (APIs)
+                    são conjuntos de ferramentas, definições e protocolos para a criação de aplicações
+                    de software.<br>
+                    Resumidamente, API nada mais é do que uma forma de comunicação entre sistemas em
+                    que um deles fornece informações e serviços que podem ser utilizados pelo outro,
+                    sem a necessidade de algum dos sistemas conhecer detalhes de implementação do
+                    software.
+                </p>
+                <img src="7049806.jpg" class="formatarImagem">
+
+            </article>
+        </section>
+
+        <section>
+            <h2 id="tiposApi">Tipos de API</h2>
+
+            <article>
+                <p>
+                    Existem diversos tipos de APIs, cada uma com diferentes níveis de acesso e controle.
+                    A API privada é usada internamente pelas empresas, oferecendo um controle direto
+                    sobre seu uso. Em contraste, a API pública está disponível para todos, permitindo
+                    que terceiros desenvolvam novas aplicações e impulsionem a inovação.
+                    Além disso, há APIs compartilhadas com parceiros de negócios específicos,
+                    que podem gerar receitas adicionais sem comprometer a qualidade do serviço.
+                    As APIs remotas ou web são desenvolvidas para interagir através de redes de
+                    comunicação, acessando recursos fora do dispositivo solicitante. Embora nem
+                    todas as APIs remotas sejam necessariamente da web, as APIs web são comumente
+                    remotas. Elas normalmente utilizam o protocolo
+                    <abbr title='Hypertext Transfer Protocol (Protocolo de Transferência de Hipertexto)'>
+                        HTTP</abbr> para enviar solicitações e
+                    definem a estrutura das respostas, que geralmente são formatadas em XML ou JSON.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2 id="soapRest">API SOAP e API REST</h2>
+
+            <article>
+
+                <p>
+                    Com o aumento do uso de APIs na web, surgiram normas de protocolo para
+                    padronizar a troca de informações. Duas delas são o Simple Object Access Protocol
+                    (SOAP) e a Representational State Transfer (REST). As APIs que seguem o padrão
+                    SOAP utilizam XML para mensagens e recebem solicitações via HTTP ou
+                    <abbr title="Simple Mail Transfer Protocol">SMTP</abbr>,
+                    facilitando a comunicação entre diferentes aplicações. Por outro lado, as APIs
+                    RESTful, seguindo os princípios da arquitetura REST, não têm um padrão oficial
+                    definido, mas são consideradas RESTful se atenderem às seis restrições de
+                    arquitetura estabelecidas por Roy Fielding.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Arquitetura cliente-servidor:</strong>
+                        a arquitetura REST é composta por clientes, servidores e recursos.
+                        Ela lida com as solicitações via HTTP.
+                    </li>
+
+                    <li>
+                        <strong>Sem monitoração de estado:</strong>
+                        nenhum conteúdo do cliente é armazenado no servidor entre as solicitações.
+                        Em vez disso, as informações sobre o estado da sessão são mantidas com o cliente.
+                    </li>
+
+                    <li>
+                        <strong>Capacidade de cache:</strong>
+                        o armazenamento em cache pode eliminar a necessidade de algumas interações
+                        entre o cliente e o servidor.
+                    </li>
+
+                    <li>
+                        <strong>Sistema em camadas:</strong>
+                        as interações entre cliente e servidor podem ser mediadas por camadas
+                        adicionais. Essas camadas podem oferecer recursos extras, como balanceamento
+                        de carga, caches compartilhados ou segurança.
+                    </li>
+
+                    <li>
+                        <strong>Código sob demanda (opcional):</strong>
+                        os servidores podem ampliar a funcionalidade de um cliente por meio
+                        da transferência de códigos executáveis.
+                    </li>
+
+                    <li>
+                        <strong>Interface uniforme:</strong>
+                        essa restrição é essencial para o design de APIs RESTful e inclui quatro vertentes:
+
+                        <ul class="subtopicos">
+                            <li>
+                                <strong>Identificação de recursos nas solicitações:</strong>
+                                os recursos são identificados nas solicitações e separados das
+                                representações retornadas para o cliente.
+                            </li>
+                            <li>
+                                <strong>Manipulação de recursos por meio de representações:</strong>
+                                os clientes recebem arquivos que representam recursos. Essas representações
+                                precisam ter informações suficientes para permitir a modificação ou exclusão.
+                            </li>
+                            <li>
+                                <strong>Mensagens autodescritivas:</strong>
+                                cada mensagem retornada para um cliente contém informações suficientes para
+                                descrever como ele deve processá-las.
+                            </li>
+                            <li>
+                                <strong>Hipermídia como plataforma do estado das aplicações:</strong>
+                                depois de acessar um recurso, o cliente REST pode descobrir todas as outras ações
+                                disponíveis no momento por meio de hiperlinks.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2 id="ferramentas">Ferramentas</h2>
+
+            <ol class="ferramentas">
+                <li>
+                    <div>
+                        <b><h3>SWAGGER</h3></b>
+                        <img src="68747470733a2f2f63646e2e737667706f726e2e636f6d2f6c6f676f732f737761676765722e737667.svg" alt="Swagger" height="32"/>
+                      </div>
+                </li>
+
+                <p>
+                    Ele é de código aberto e possibilita aos desenvolvedores e equipes criar, documentar e utilizar
+                    APIs em RESTful.<br>
+                    O Swagger é capaz de ajudar desenvolvedores de APIs REST a:
+
+                </p>
+
+                <ul>
+                    <li>Modelar APIs;</li>
+                    <li>Gerar documentação automatizada da API;</li>
+                    <li>Gerar códigos do cliente e do servidor, suportando diversas linguagens de programação;</li>
+                    <li>Testar funcionalidades da API.</li>
+                </ul>
+
+                <p>
+                    Para executar essas atividades, o Swagger requer a definição da OpenAPI, que é uma linguagem
+                    usada para descrever os contratos das APIs REST. A OpenAPI estabelece um formato JSON com campos
+                    consistentes, permitindo que o usuário descreva os recursos, os modelos de dados, as URIs, os
+                    tipos de conteúdo e os métodos HTTP aceitos.<br>
+                    Além da OpenAPI, o Swagger dispõe um conjunto de ferramentas e as principais são:
+                </p>
+
+                <ul>
+                    <li>Swagger Editor</li>
+                    <li>Swagger UI</li>
+                    <li>Swagger Codegen</li>
+                </ul>
+
+                <p>
+                    O módulo de UI permite que desenvolvedores interajam intuitivamente com as APIs em sandbox.
+                    Enquanto isso, o Editor é uma ferramenta online que permite uma documentação mais interativa,
+                    utilizando YAML. Uma vantagem do Editor é sua coleção de modelos de documentos que oferecem uma
+                    base para aqueles que não querem começar do zero na documentação.<br>
+                    A documentação para APIs pode ser feita de três formas:
+                <ol>
+                    <li>
+                        <b>Manualmente:</b>
+                        o desenvolvedor escreve livremente as especificações da API e as publica posteriormente
+                        em seu próprio servidor.
+                    </li>
+                    <li>
+                        <b>Automaticamente:</b>
+                        simultaneamente ao desenvolvimento da API é gerada a documentação.
+                    </li>
+                    <li>
+                        <b>Codegen:</b>
+                        converte todas as anotações contidas no código fonte das APIs REST em documentação.
+                    </li>
+                </ol>
+                </p>
+
+                <li>
+                    <div>
+                    <b><h3 id="blueprint">API BLUEPRINT</h3></b>
+                    <img src="api_blueprint_logo.png" alt="API Blueprint" height="32">
+                </div>
+                </li>
+
+                <p>
+                    É uma linguagem de descrição e especificação de APIs que utiliza Markdown, simplificando
+                    a edição para usuários não familiarizados com códigos. A maioria de suas ferramentas são
+                    de código aberto, visando agilizar o processo de criação e prototipagem de APIs, assim
+                    como documentar e testar APIs já em uso de forma eficiente.<br>
+                    A documentação nesse caso mostra:
+                </p>
+
+                <ul>
+                    <li>Atributos listados com suas descrições;</li>
+                    <li>Exemplos de solicitações;</li>
+                    <li>Respostas desses exemplos.</li>
+                </ul>
+
+                <br>No caso do Blueprint, duas são as ferramentas integradas a ele que se destacam:<br>
+
+                <ol type="a">
+                    <li>
+                        <b>Dredd</b>
+                        <br>A ferramenta possibilita a realização de testes no serviço de back-end com base
+                        na documentação da API, o que ajuda a resolver problemas de desatualização dessa
+                        documentação. Além disso, ela oferece suporte para uma variedade de linguagens,
+                        incluindo PHP, Python, Ruby, Perl, Node.js e Go.
+                    </li>
+
+                    <li>
+                        <b>Drakov</b>
+                        <br>Facilita o início e teste de serviços simulados, onde as solicitações e
+                        respostas são ajustadas de acordo com a documentação da API, funcionando
+                        como um ambiente de testes.
+                    </li>
+                </ol>
+
+                <li>
+                    <div>
+                    <b><h3 id="raml">RAML</h3></b>
+                    <img src="raml-icon-512x147-vzwwyjm5.png" alt="RAML icon" height="24">
+                </div>
+                </li>
+
+                <p>
+                    O RAML oferece opções de documentação de APIs com ferramentas open source,
+                    como o Console da API e o HTML RAML 2. A rápida geração de documentação é
+                    facilitada por analisadores disponíveis em vários idiomas, permitindo a
+                    criação de documentos personalizados e scripts interativos. O formato base
+                    o RAML é YAML, mas também é compatível com outros padrões como JSON e é
+                    neutro em relação a ferramentas de linguagem, como Java, Javascript, .Net,
+                    PHP, Python e Ruby. No entanto, o uso do RAML pode ter desvantagens,
+                    especialmente se a API não seguir os princípios RESTful ou se não for baseada
+                    em HTTP. Além disso, o YAML é voltado para desenvolvedores, o que pode
+                    dificultar para equipes sem conhecimentos técnicos criarem APIs ou
+                    documentações sem o uso de ferramentas de design adequadas.
+                </p>
+                <li>
+                    <h2 id="referencias">Referências</h2>
+                    <p>
+                        O que é API?. <b>Red Hat</b>, 2023. Disponível em:
+                        &lt;https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces&gt;.
+                        Acesso em: 28 fev. 2024.
+                    </p>
+                    <p>
+                        <br>RUIZ, David. Conheça as 3 principais ferramentas de documentação de APIs. <b>API Playbook</b>, 2020. Disponível em:
+                        &lt;https://www.apiplaybook.com/p/conheca-as-3-principais-ferramentas-de-documentacao-de-apis&gt;.
+                        Acesso em: 28 fev. 2024.
+                    </p>
+
+                    <br>
+                    <p>
+                        Figura 1<br>
+                        Fonte: <b>FREEPIK</b><br>
+                        Disponível em: <br>&lt;https://img.freepik.com/free-vector/hand-drawn-flat-design-api-illustration_23-2149367256.jpg?w=740&t=st=1710007238~exp=1710007838~hmac=b878267ce6233de04eb3bef188446c9d457aa6ba4947196c57a4f09ebfc2965d&gt;<br>
+                        Acesso em: 09 de mar. 2024.
+                    </p>
+                    
+                    <br>
+                    <p>
+                        Figura 2<br>
+                        Fonte: <b>GitHub</b><br>
+                        Disponível em: &lt;https://camo.githubusercontent.com/12280883c2011b7c948b1584fa537d7bdfc46760fed6cd0a88a718dd1472bb0e/68747470733a2f2f63646e2e737667706f726e2e636f6d2f6c6f676f732f737761676765722e737667&gt;<br>
+                        Acesso em: 09 de mar. 2024.
+                    </p>
+
+                    <br>
+                    <p>
+                        Figura 3<br>
+                        Fonte: <b>apiary</b><br>
+                        Disponível em: &lt;https://help.apiary.io/images/api_blueprint_logo.png&gt;<br>
+                        Acesso em 09 de mar. 2024.
+                    </p>
+
+                    <br>
+                    <p>
+                        Figura 4<br>
+                        Fonte: <b>Iconduck</b><br>
+                        Disponível em: &lt;https://iconduck.com/icons/27859/raml&gt;<br>
+                        Acesso em: 09 de mar. 2024.
+                    </p>
+                </li>
+            </ol>
+
+        </section>
+
+    </main>
+
+    
+
+    <footer>
+        &copy; Alisson. Todos os direitos reservados.
+    </footer>
+
+</body>
+
+</html>

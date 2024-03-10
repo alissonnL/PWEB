@@ -1,0 +1,120 @@
+/*removendo qualquer margem ou preenchimento padrão que os navegadores podem aplicar*/
+body, h1, h2, h3, p, ul, ol{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+/*define a fonte como Arial ou uma fonte genérica sans-serif, define a altura da linha como 1.6
+e define a cor de fundo como um cinza claro*/
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8
+}
+
+/*estiliza o cabeçalho da página, definindo a cor de fundo como preto, a cor do texto como branco
+e adiciona o preenchimento interno (padding) de 20 pixels, centralizando o texto*/
+header{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/*remove o estilo da lista (p.ex. (1., 2.), (a, b)) e o preenchimento interno*/
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+/*exibição dos itens em linha*/
+nav ul li{
+    display: inline;
+}
+
+/*remove o sublinhado dos itens da lista, define a cor do texto para petro e adiciona
+espaçamento interno*/
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+}
+
+li{
+    margin-left: 18px;
+}
+
+/*define a cor do texto de cada h2 de section para preto, adiciona uma borda sólida abaixo
+do texto e define a cor como #ccc (rgb), adiciona espaçamento interno e externo*/
+section h2{
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+
+/*Os valores 0 2px 4px especificam a posição da sombra (nenhuma deslocamento horizontal,
+2 pixels para baixo e 4 pixels de desfoque). O rgba(0, 0, 0, 0.1) define a cor da sombra
+como preta (0, 0, 0) com uma opacidade de 10% (0.1)*/
+article{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+}
+
+.artigoApi{
+    display: flex;
+}
+
+.formatarImagem{
+    float: right;
+    margin-left: 20px;
+    width: 15%;
+    height: auto;
+}
+
+div{
+    display: flex;
+    align-items: center;
+}
+h3, div img{
+    margin-left: 5px;
+}
+ul ol{
+    margin-bottom: 20px;
+}
+
+/*formatação para listas que estão dentro de listas (aninhadas)*/
+ul ul ol ol{
+    margin-top: 20px;
+}
+
+/*tamanho do sublinhado abbr e aplicação de estilo dotted com cor azul, mudança no estilo
+do mouse quando passado encima de um elemento abbr*/
+abbr{
+    border-bottom: 1px dotted #007bff;
+    cursor: help;
+}
+
+.subtopicos{
+    padding-left: 10px;
+}
+
+.ferramentas{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow:rgba(0, 0, 0, 0.1);
+}
+
+#raml, #blueprint{
+    padding-top: 10px;
+}
