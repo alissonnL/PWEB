@@ -12,7 +12,7 @@ var contadorOpiniao1 = 0;
 var pctOtimoBom = 0;
 var totalEntrevistados = 0;
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 45; i++) {
     pesquisas[i] = new Pessoa(
         parseInt(
             prompt(
