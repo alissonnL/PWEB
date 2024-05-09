@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function formatarTexto(){
+            var texto = document.getElementById("txt").value;
+            var min = document.getElementById("min");
+            var mai = document.getElementById("mai");
+            
+            if (min.checked){
+                document.getElementById("txt").value = texto.toUpperCase();
+                mai.disabled = true;
+            } else if (mai.checked && min.checked == false) {
+                document.getElementById("txt").value = texto.toLowerCase();
+                min.disabled = true;
+            }else{
+                mai.disabled = false;
+                min.disabled = false;
+            }
+        }
+    </script>
+</head>
+<body style="margin:14px">
+    <input type="text" id="txt" style="margin-bottom:15px">
+    <br>
+    <input type="checkbox" id="min" onchange="formatarTexto();">
+    Formatar texto em letras maiúsculas 
+    <br>
+    <input type="checkbox" id="mai" onchange="formatarTexto();">
+    Formatar texto em letras minúsculas 
+</body>
+</html>
