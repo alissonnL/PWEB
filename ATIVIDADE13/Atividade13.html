@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="margin-left:14px">Abra a Janela</h1>
+        <img src="janelafechada.png"
+        width="30%"
+        onmouseover="document.images[0].src='janelaaberta.png'; document.querySelector('h1').innerText='Janela Aberta'"
+        onclick="document.images[0].src='janelaquebra.png'; document.querySelector('h1').innerText='Janela Quebrada'"
+        onmouseout="document.images[0].src='janelafechada.png'; document.querySelector('h1').innerText='Janela Fechada'">
+</body>
+</html>
