@@ -1,0 +1,30 @@
+html{
+    background-color    : rgb(75, 9, 137);
+}
+
+h1, h2, h3, p, label{
+    color: white;
+}
+
+h2, h3{
+    font-weight: normal;
+    font-size: large;
+    margin-bottom: 0%;
+}
+
+header{
+    text-align: center;
+}
+
+input[name=email]{
+    width: 15rem;
+}
+
+h3, p{
+    align-items: center;
+    margin: auto;
+    display: flex;
+    width: fit-content;
+    margin-bottom: 10px;
+    align-self: center;
+}
