@@ -1,0 +1,17 @@
+header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #ccc;
+    background-color: cadetblue;
+    margin-bottom: 20px;
+}
+
+header p {
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}

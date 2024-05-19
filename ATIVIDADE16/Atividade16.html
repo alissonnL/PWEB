@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Atividade16.css">
+    <script src="Atividade16.js"></script>
+</head>
+
+<body>
+    <header>
+        <p>Cursos FATEC Sorocaba</p>
+    </header>
+
+    <main>
+        <label for="cursos">Selecione um curso:</label>
+        <select id="cursos" onchange="detalharCurso(document.getElementById('cursos').value)">
+            <option value="">Selecione...</option>
+            <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+            <option value="ea">Eletrônica Automotiva</option>
+            <option value="fm">Fabricação Mecânica</option>
+            <option value="gq">Gestão da Qualidade</option>
+            <option value="lg">Logística</option>
+            <option value="ma">Manufatura Avançada</option>
+            <option value="pol">Polímeros</option>
+            <option value="pm">Processos Metalúrgicos</option>
+            <option value="mp">Projetos Mecânicos</option>
+            <option value="sb">Sistemas Biomédicos</option>
+        </select>
+    </main>
+</body>
+
+</html>
